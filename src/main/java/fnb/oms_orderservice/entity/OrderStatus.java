@@ -1,9 +1,8 @@
 package fnb.oms_orderservice.entity;
 
 public enum OrderStatus {
-    PENDING,
-    CONFIRMED,
-    SHIPPED,
+    PLACED,
+    OUT_FOR_DELIVERY,
     DELIVERED,
-    CANCELLED
+    COMPLETED
 }

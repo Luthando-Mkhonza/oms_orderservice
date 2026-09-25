@@ -1,15 +1,16 @@
 package fnb.oms_orderservice.service;
 
-import fnb.oms_orderservice.entity.Order;
+import fnb.oms_orderservice.dto.OrderRequestDTO;
+import fnb.oms_orderservice.dto.OrderResponseDTO;
 import fnb.oms_orderservice.entity.OrderStatus;
 
 import java.util.List;
 
 public interface OrderService {
-    Order createOrder(Order order);
-    Order getOrderById(Long id);
-    List<Order> getAllOrders();
-    List<Order> getOrdersByCustomerId(Long customerId);
-    Order updateOrderStatus(Long id, OrderStatus status);
+    OrderResponseDTO createOrder(OrderRequestDTO requestDTO);
+    OrderResponseDTO getOrderById(Long id);
+    List<OrderResponseDTO> getAllOrders();
+    List<OrderResponseDTO> getOrdersByCustomerId(Long customerId);
+    OrderResponseDTO updateOrderStatus(Long id, OrderStatus status);
     void cancelOrder(Long id);
 }
